@@ -41,15 +41,15 @@ Usage:
 	java -jar netforce.jar [-h] [-v] [-s -t IPRANGE -p PORT -w TIMEOUT]
 			       		   [-b -t HOST -p PORT -u USER -f FILE -w TIMEOUT]
 Arguments:
-	-h, --help			Display this message.
+	-h, --help		Display this message.
 	-v, --version		Display current version.
-	-s, --scan			Scan network for open ports.
+	-s, --scan		Scan network for open ports.
 	-b, --bruteforce	Brute force SSH server.
 	-t, --target		Specify IP range when scanning, or host when brute forcing.
-	-p, --port			Specify port to use. (Set to 22 if not specified)
-	-u, --user			Specify user to brute force.
-	-f, --file			Specify wordlist file to user when brute forcing.
-	-w, --wait			Specify connection timeout in milliseconds. (Set to 300 if not specified)
+	-p, --port		Specify port to use. (Set to 22 if not specified)
+	-u, --user		Specify user to brute force.
+	-f, --file		Specify wordlist file to user when brute forcing.
+	-w, --wait		Specify connection timeout in milliseconds. (Set to 300 if not specified)
 ```
 ### Examples of usage:
 ```
