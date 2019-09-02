@@ -1,10 +1,10 @@
 # NetForce
-NetForce: A network scanning and SSH brute forcing tool 
+NetForce: A network scanning and SSH brute forcing tool
 
 ## Features
-NetForce can both scan a network for open ports and brute force attack an SSH server. 
+NetForce can both scan a network for open ports and brute force attack an SSH server.
 
-It can scan a network when given a range of IP addresses along with a port to scan for. 
+It can scan a network when given a range of IP addresses along with a port to scan for.
 This will return all IP addresses in the given range with the given port open.
 
 NetForce can also brute force attack an SSH server in attempt to obtain a password.
@@ -23,7 +23,7 @@ NetForce is compatible with both Linux and Windows.
 # clone NetForce
 git clone https://github.com/ThatcherDev/NetForce.git
 
-# change the working directory to NetForce 
+# change the working directory to NetForce
 cd NetForce
 
 # build NetForce with Maven
