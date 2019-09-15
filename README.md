@@ -12,11 +12,10 @@ This requires a host address/name, port, user, and wordlist file containing pass
 A sample wordlist file with common SSH passwords is provided in src/main/resources/SSH_Pass.txt.
 
 ## Requirements
-- A Java JDK distribution must be installed and added to PATH.
-- Maven must be installed and added to PATH.
+- A Java JDK distribution must be installed and added to PATH with label JAVA_HOME.
 
 ## Compatibility
-NetForce is compatible with both Linux and Windows.
+NetForce is compatible with both Windows and Linux.
 
 ## Installation
 ```
@@ -27,7 +26,12 @@ git clone https://github.com/ThatcherDev/NetForce.git
 cd NetForce
 
 # build NetForce with Maven
-mvn clean package
+# for Linux run
+chmod +x mvnw
+./mvnw clean package
+
+# for Windows run
+mvnw.cmd clean package
 ```
 
 Alternatively, you can download the jar from the [release page](https://github.com/ThatcherDev/NetForce/releases).
