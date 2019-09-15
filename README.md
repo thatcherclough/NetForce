@@ -1,10 +1,10 @@
 # NetForce
-NetForce: A network scanning and SSH brute forcing tool 
+NetForce: A network scanning and SSH brute forcing tool
 
 ## Features
-NetForce can both scan a network for open ports and brute force attack an SSH server. 
+NetForce can both scan a network for open ports and brute force attack an SSH server.
 
-It can scan a network when given a range of IP addresses along with a port to scan for. 
+It can scan a network when given a range of IP addresses along with a port to scan for.
 This will return all IP addresses in the given range with the given port open.
 
 NetForce can also brute force attack an SSH server in attempt to obtain a password.
@@ -12,22 +12,26 @@ This requires a host address/name, port, user, and wordlist file containing pass
 A sample wordlist file with common SSH passwords is provided in src/main/resources/SSH_Pass.txt.
 
 ## Requirements
-- A Java JDK distribution must be installed and added to PATH.
-- Maven must be installed and added to PATH.
+- A Java JDK distribution must be installed and added to PATH with label JAVA_HOME.
 
 ## Compatibility
-NetForce is compatible with both Linux and Windows.
+NetForce is compatible with both Windows and Linux.
 
 ## Installation
 ```
 # clone NetForce
 git clone https://github.com/ThatcherDev/NetForce.git
 
-# change the working directory to NetForce 
+# change the working directory to NetForce
 cd NetForce
 
 # build NetForce with Maven
-mvn clean package
+# for Linux run
+chmod +x mvnw
+./mvnw clean package
+
+# for Windows run
+mvnw.cmd clean package
 ```
 
 Alternatively, you can download the jar from the [release page](https://github.com/ThatcherDev/NetForce/releases).
