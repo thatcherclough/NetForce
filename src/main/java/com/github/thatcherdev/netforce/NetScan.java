@@ -1,11 +1,16 @@
 package com.github.thatcherdev.netforce;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class NetScan {
+
+	private static ArrayList<String> open = new ArrayList<String>();
 
 	/**
 	 * Scan all IP addressed included in {@link ipRange} for open port {@link port}
@@ -18,20 +23,26 @@ public class NetScan {
 	 */
 	public static void scan(String ipRange, int port, int timeout) {
 		try {
-			System.out.println("Scanning " + ipRange + ":" + port + "\n");
-			ArrayList<String> open = new ArrayList<String>();
+			System.out.println("Scanning " + ipRange + ":" + port);
+			ExecutorService es = Executors.newCachedThreadPool();
 			String[] parts = ipRange.split("\\.", -1);
 			for (String part0 : getNums(parts[0]))
 				for (String part1 : getNums(parts[1]))
 					for (String part2 : getNums(parts[2]))
 						for (String part3 : getNums(parts[3])) {
 							String ip = part0 + "." + part1 + "." + part2 + "." + part3;
-							System.out.print("\033[2K\033[56DScanning " + ip);
-							if (portIsOpen(ip, port, timeout))
-								open.add(ip);
+							es.execute(new Runnable() {
+								@Override
+								public void run() {
+									if (portIsOpen(ip, port, timeout))
+										open.add(ip);
+								}
+							});
 						}
+			es.shutdown();
+			es.awaitTermination(1, TimeUnit.MINUTES);
 			if (open.size() > 0) {
-				System.out.println("\033[2K\033[56DHosts with port " + port + " open:\n");
+				System.out.println("\nHosts with port " + port + " open:\n");
 				for (String ip : open) {
 					String name = Inet4Address.getByName(ip).getHostName();
 					if (name.equals(ip))
@@ -40,9 +51,8 @@ public class NetScan {
 						System.out.println(ip + "/" + name);
 				}
 			} else
-				System.out.println("\033[2K\033[56DNo hosts with port " + port + " open were found");
+				System.out.println("\nNo hosts with port " + port + " open were found");
 		} catch (Exception e) {
-			System.out.print("\033[2K\033[56D");
 			e.printStackTrace();
 		}
 	}
