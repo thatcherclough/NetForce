@@ -12,10 +12,10 @@ This requires a host address/name, port, user or file contains usernames to try,
 Common SSH usernames and passwords can be found in src/main/resources/.
 
 ## Requirements
-- A Java JDK distribution must be installed and added to PATH with label JAVA_HOME.
+- A Java JDK distribution must be installed and added to PATH.
 
 ## Compatibility
-NetForce is compatible with both Windows and Linux.
+NetForce is compatible with Windows, Mac, and Linux.
 
 ## Installation
 ```
@@ -26,12 +26,15 @@ git clone https://github.com/ThatcherDev/NetForce.git
 cd NetForce
 
 # build NetForce with Maven
+# for Windows run
+mvnw.cmd clean package
+
 # for Linux run
 chmod +x mvnw
 ./mvnw clean package
 
-# for Windows run
-mvnw.cmd clean package
+# for Mac run
+sh mvnw clean package
 ```
 
 Alternatively, you can download the jar from the [release page](https://github.com/ThatcherDev/NetForce/releases).
