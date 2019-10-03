@@ -11,6 +11,9 @@ NetForce can also brute force attack an SSH server in attempt to obtain a userna
 This requires a host address/name, port, user or file contains usernames to try, and a password or file containing passwords to try.
 Common SSH usernames and passwords can be found in src/main/resources/.
 
+## Demo
+<a href="https://asciinema.org/a/272184" target="_blank"><img src="https://asciinema.org/a/272184.svg" width="600"/></a>
+
 ## Requirements
 - A Java JDK distribution must be installed and added to PATH.
 
