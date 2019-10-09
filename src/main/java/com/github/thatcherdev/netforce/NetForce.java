@@ -10,7 +10,7 @@ public class NetForce {
 	private static String user;
 	private static String pass;
 	private static int timeout = 300;
-	private static String help = "NetForce: A network scanning and SSH brute forcing tool (1.0)\n\nUsage:\n\tjava -jar netforce.jar [-h] [-v] [scan -t IPRANGE -p PORT -w TIMEOUT]\n"
+	private static String help = "NetForce: A network scanning and SSH brute forcing tool (1.5.0)\n\nUsage:\n\tjava -jar netforce.jar [-h] [-v] [scan -t IPRANGE -p PORT -w TIMEOUT]\n"
 			+ "\t\t\t       [brute -t HOST -p PORT -un USER/FILE -pw PASSWORD/FILE -w TIMEOUT]\nArguments:\n\t-h,  --help\t\tDisplay this message.\n\t-v,  --version\t\tDisplay current version.\n"
 			+ "\t-t,  --target\t\tSpecify IP range when scanning, or host when brute forcing.\n\t-p,  --port\t\tSpecify port to use. (Set to 22 if not specified)\n"
 			+ "\t-un, --user\t\tSpecify username or file containing usernames to use.\n\t-pw, --pass\t\tSpecify password or file containing passwords to use.\n"

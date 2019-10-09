@@ -81,7 +81,7 @@ public class Bruteforce {
 	 * ArrayList containing {@link toGet}.
 	 *
 	 * @param toGet filename or string to return in an ArrayList
-	 * @return an ArrayList contians data from file {@link toGet}, or {@link toGet}
+	 * @return an ArrayList contains data from file {@link toGet}, or {@link toGet}
 	 * @throws FileNotFoundException
 	 */
 	private static ArrayList<String> getArrayList(String toGet) throws FileNotFoundException {
