@@ -1,5 +1,5 @@
 # NetForce
-NetForce: A network scanning and SSH brute forcing tool
+NetForce: A network scanning and SSH brute forcing tool.
 
 ## Features
 NetForce can both scan a network for open ports and brute force attack an SSH server.
@@ -15,7 +15,7 @@ Common SSH usernames and passwords can be found in src/main/resources/.
 <a href="https://asciinema.org/a/272184" target="_blank"><img src="https://asciinema.org/a/272184.svg" width="600"/></a>
 
 ## Requirements
-- A Java JDK distribution must be installed and added to PATH.
+- A Java JDK distribution >=8 must be installed and added to PATH.
 
 ## Compatibility
 NetForce is compatible with Windows, Mac, and Linux.
@@ -45,19 +45,20 @@ Alternatively, you can download the jar from the [release page](https://github.c
 ## Usage
 ```
 java -jar netforce.jar
-NetForce: A network scanning and SSH brute forcing tool (1.0)
+NetForce: A network scanning and SSH brute forcing tool (1.0.0)
 
 Usage:
-        java -jar netforce.jar [-h] [-v] [scan -t IPRANGE -p PORT -w TIMEOUT]
-                               [brute -t HOST -p PORT -un USER/FILE -pw PASSWORD/FILE -w TIMEOUT]
+	java -jar netforce.jar [-h] [-v] [scan -t IPRANGE -p PORT -w TIMEOUT]
+			       [brute -t HOST -p PORT -un USER/FILE -pw PASSWORD/FILE -w TIMEOUT]
 Arguments:
-        -h,  --help             Display this message.
-        -v,  --version          Display current version.
-        -t,  --target           Specify IP range when scanning, or host when brute forcing.
-        -p,  --port             Specify port to use. (Set to 22 if not specified)
-        -un, --user             Specify username or file containing usernames to use.
-        -pw, --pass             Specify password or file containing passwords to use.
-        -w,  --wait             Specify connection timeout in milliseconds. (Set to 300 if not specified)
+	-h,  --help		Display this message.
+	-v,  --version		Display current version.
+	-t,  --target		Specify IP range when scanning or host when brute forcing.
+	-p,  --port		Specify port to use. (Set to 22 by default)
+	-un, --user		Specify username or file containing usernames to use.
+	-pw, --pass		Specify password or file containing passwords to use.
+	-w,  --wait		Specify connection timeout in milliseconds. (Set to 1000 by default)
+
 ```
 ### Examples of usage:
 ```
@@ -70,4 +71,4 @@ java -jar netforce.jar brute -t 192.168.86.28 -un src/main/resources/SSH_User.tx
 
 ## License
 - [MIT](https://choosealicense.com/licenses/mit/)
-- Copyright 2019© ThatcherDev.
+- Copyright 2019 ©️ ThatcherDev.
