@@ -1,4 +1,4 @@
-package com.github.thatcherdev.netforce;
+package dev.thatcherclough.netforce;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;

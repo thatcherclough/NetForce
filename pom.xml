@@ -7,7 +7,7 @@
 		<version>2.1.8.RELEASE</version>
 		<relativePath />
 	</parent>
-	<groupId>com.github.thatcherdev</groupId>
+	<groupId>dev.thatcherclough</groupId>
 	<artifactId>NetForce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>NetForce</name>
@@ -53,7 +53,7 @@
 						<phase>package</phase>
 						<configuration>
 							<finalName>netforce</finalName>
-							<mainClass>com.github.thatcherdev.netforce.NetForce</mainClass>
+							<mainClass>dev.thatcherclough.netforce.NetForce</mainClass>
 							<outputDirectory>${project.basedir}</outputDirectory>
 						</configuration>
 						<goals>
