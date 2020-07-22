@@ -23,7 +23,7 @@ NetForce is compatible with Windows, Mac, and Linux.
 ## Installation
 ```
 # clone NetForce
-git clone https://github.com/ThatcherDev/NetForce.git
+git clone https://github.com/thatcherclough/NetForce.git
 
 # change the working directory to NetForce
 cd NetForce
@@ -40,7 +40,7 @@ chmod +x mvnw
 sh mvnw clean package
 ```
 
-Alternatively, you can download the jar from the [release page](https://github.com/ThatcherDev/NetForce/releases).
+Alternatively, you can download the jar from the [release page](https://github.com/thatcherclough/NetForce/releases).
 
 ## Usage
 ```
@@ -71,4 +71,4 @@ java -jar netforce.jar brute -t 192.168.86.28 -un src/main/resources/SSH_User.tx
 
 ## License
 - [MIT](https://choosealicense.com/licenses/mit/)
-- Copyright 2019 ©️ ThatcherDev.
+- Copyright 2020 © Thatcher Clough.

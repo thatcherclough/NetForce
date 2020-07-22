@@ -1,4 +1,4 @@
-package com.github.thatcherdev.netforce;
+package dev.thatcherclough.netforce;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
